@@ -6,7 +6,7 @@ import { Update } from 'telegraf/typings/core/types/typegram';
 const debug = createDebug('bot:dev');
 
 const PORT = (process.env.PORT && parseInt(process.env.PORT, 10)) || 3000;
-const VERCEL_URL = `https://alhur.vercel.app/`;
+const VERCEL_URL = `https://alhur-bot.vercel.app/`;
 
 const production = async (
   req: VercelRequest,
