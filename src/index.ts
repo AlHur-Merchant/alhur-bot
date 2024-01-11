@@ -17,7 +17,7 @@ const channelId = '@babyloncenter_net'; // Replace with your channel username or
 
 
 bot.start((ctx) =>
-  ctx.reply('اهلا وسهلا بكم في شركة الحر!', {
+  ctx.reply('اهلا وسهلا بكم في شركة الحرة العراقية!', {
     reply_markup: {
       keyboard: [[{ text: 'اضغط هنا لفتح قائمة المواد', web_app: { url: webLink } }]],
     },
