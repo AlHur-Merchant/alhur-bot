@@ -1,0 +1,30 @@
+{
+  "name": "Babylon_bot",
+  "version": "1.1.0",
+  "description": "Babylon center",
+  "main": "src/index.ts",
+  "author": "Babylon center",
+  "homepage": "",
+  "dependencies": {
+    "@vercel/node": "^3.0.11",
+    "dotenv-cli": "^7.3.0",
+    "telegraf": "^4.15.3",
+    "vercel": "^33.0.1"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "@types/node": "^20.10.0",
+    "@vercel/ncc": "^0.38.1",
+    "debug": "^4.3.4",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  },
+  "scripts": {
+    "dev": "DEBUG=bot* dotenv -- nodemon -e ts -x ts-node src/index.ts",
+    "devWindows": "@powershell -Command $env:DEBUG='bot*';dotenv -- -- nodemon -e ts -x ts-node src/index.ts",
+    "build": "ncc build src/index.ts -o public -m",
+    "prettier": "prettier --write 'src/**/*.ts'"
+  }
+}
