@@ -55,11 +55,10 @@ bot.on('message', async (ctx) => {
     const orderMessage = orderDetails.join('\n');
 
     // Send the order message
-  ctx.replyWithMarkdown(
-      `${ctx.from.first_name}\n` +
+     `${ctx.from.first_name}\n` +
       `تم ارسال الطلب التالي:\n` +
-      `${orderTable}\n` +
-      `- المجموع: د ${totalPrice.toFixed(2)}\n` +
+      `${orderMessage}\n` +
+      `- المجموع: د ${totalPrice.toFixed(2)}\n`+
       `- *اسم المحل*: ${storeName}\n` +
       `- *رقم الهاتف*: ${phoneNumber}\n` +
       `- *العنوان*: ${address}\n` +
@@ -69,8 +68,8 @@ bot.on('message', async (ctx) => {
     // Prepare a message for the channel
     const channelMessage = `تم استلام طلب جديد:\n` +
       `${ctx.from.first_name}\n` +
-      `${orderTable}\n` +
-      `- المجموع: د ${totalPrice.toFixed(2)}\n` +
+      `${orderMessage}\n` +
+      `- المجموع: د ${totalPrice.toFixed(2)}\n`+
       `-راسم المحل ${storeName}\n` +
       `- رقم الهاتف: ${phoneNumber}\n` +
       `- العنوان: ${address}\n` +
