@@ -59,7 +59,7 @@ bot.on('message', async (ctx) => {
       `${ctx.from.first_name}\n` +
       `تم ارسال الطلب التالي:\n` +
       `${orderMessage}\n` +
-      `- المجموع: د ${totalPrice.toFixed(2)}\n`+
+      `- المجموع*: د* ${totalPrice.toFixed(2)}\n`+
         `- *اسم المحل*: ${storeName}\n` +
       `- *رقم الهاتف*: ${phoneNumber}\n` +
       `- *العنوان*: ${address}\n` +
@@ -70,11 +70,11 @@ bot.on('message', async (ctx) => {
     const channelMessage = `تم استلام طلب جديد:\n` +
       `${ctx.from.first_name}\n` +
       `${orderMessage}\n` +
-      `- المجموع: د ${totalPrice.toFixed(2)}\n`+
+      `- المجموع*: د* ${totalPrice.toFixed(2)}\n`+
         `- *اسم المحل*: ${storeName}\n` +
-      `- رقم الهاتف: ${phoneNumber}\n` +
-      `- العنوان: ${address}\n` +
-      `- الملاحظات: ${notice}`;
+      `- *رقم الهاتف*: ${phoneNumber}\n` +
+      `- *العنوان*: ${address}\n` +
+      `- *الملاحظات*: ${notice}`;
 
     // Log and send the message to the channel
     if (shouldSendChannelMessage) {
