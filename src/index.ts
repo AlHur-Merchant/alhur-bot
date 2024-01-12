@@ -48,33 +48,33 @@ bot.on('message', async (ctx) => {
       const description = item.description
 
       // Add details to the array
-      orderDetails.push(`- المادة: ${title}, التفاصيل :${description}, السعر: ${price}, العدد: ${quantity}`);
+       orderDetails.push(`- المادة: ${title}\n  التفاصيل: ${description}\n  السعر: ${price}\n  العدد: ${quantity}\n`);
     }
 
     // Join the array elements into a single string
     const orderMessage = orderDetails.join('\n');
 
     // Send the order message
-      ctx.replyWithMarkdown(
-      `${ctx.from.first_name}\n` +
-      `تم ارسال الطلب التالي:\n` +
+    ctx.replyWithMarkdown(
+      `**${ctx.from.first_name}**\n` +
+      `تم ارسال الطلب التالي:\n\n` +
       `${orderMessage}\n` +
-      `- المجموع: د ${totalPrice.toFixed(2)}\n`+
-      `- اسم المحل: ${storeName}\n` +
-            `- رقم الهاتف: ${phoneNumber}\n` +
-            `- العنوان: ${address}\n` +
-            `- الملاحظات: ${notice}`
+      `**المجموع: د ${totalPrice.toFixed(2)}**\n` +
+      `**اسم المحل:** ${storeName}\n` +
+      `**رقم الهاتف:** ${phoneNumber}\n` +
+      `**العنوان:** ${address}\n` +
+      `**الملاحظات:** ${notice}`
     );
 
     // Prepare a message for the channel
     const channelMessage = `تم استلام طلب جديد:\n` +
-      `${ctx.from.first_name}\n` +
+      `**${ctx.from.first_name}**\n\n` +
       `${orderMessage}\n` +
-      `- المجموع: د ${totalPrice.toFixed(2)}\n`+
-      `- اسم المحل: ${storeName}\n` +
-      `- رقم الهاتف: ${phoneNumber}\n` +
-      `- العنوان: ${address}\n` +
-      `- الملاحظات: ${notice}`;
+      `**المجموع: د ${totalPrice.toFixed(2)}**\n` +
+      `**اسم المحل:** ${storeName}\n` +
+      `**رقم الهاتف:** ${phoneNumber}\n` +
+      `**العنوان:** ${address}\n` +
+      `**الملاحظات:** ${notice}`;
 
     // Log and send the message to the channel
     if (shouldSendChannelMessage) {
