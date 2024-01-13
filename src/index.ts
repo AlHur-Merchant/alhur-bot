@@ -60,8 +60,8 @@ bot.on('message', async (ctx) => {
       `**${ctx.from.first_name}**\n` +
       `تم ارسال الطلب التالي:\n\n` +
       `${orderMessage}\n` +
-      `**المجموع: د ${totalPrice.toFixed(2)}**\n` +
-      `**مجموع المواد :** ${totalItems}\n` +
+      `**اجمالي الفاتورة: د ${totalPrice.toFixed(2)}**\n` +
+      `**اجمالي المواد :** ${totalItems}\n` +
       `**اسم المحل:** ${storeName}\n` +
       `**رقم الهاتف:** ${phoneNumber}\n` +
       `**العنوان:** ${address}\n` +
@@ -72,8 +72,8 @@ bot.on('message', async (ctx) => {
     const channelMessage = `تم استلام طلب جديد:\n` +
       `**${ctx.from.first_name}**\n\n` +
       `${orderMessage}\n` +
-      `**المجموع: د ${totalPrice.toFixed(2)}**\n` +
-      `**مجموع المواد :** ${totalItems}\n` +
+      `**اجمالي الفاتورة: د ${totalPrice.toFixed(2)}**\n` +
+      `**اجمالي المواد :** ${totalItems}\n` +
       `**اسم المحل:** ${storeName}\n` +
       `**رقم الهاتف:** ${phoneNumber}\n` +
       `**العنوان:** ${address}\n` +
