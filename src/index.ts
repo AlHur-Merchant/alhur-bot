@@ -12,9 +12,9 @@ const bot = new Telegraf(BOT_TOKEN);
 
 
 const webLink = 'https://alhur.vercel.app/';
-const channelId = '@babyloncenter_net'; // Replace with your channel username or ID
+//const channelId = '@babyloncenter_net'; // Replace with your channel username or ID
 
-
+const channelId = '@extra1988'
 
 bot.start((ctx) =>
   ctx.reply('اهلا وسهلا بكم في شركة الحرة العراقية!', {
