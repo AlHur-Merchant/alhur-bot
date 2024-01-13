@@ -40,17 +40,20 @@ bot.on('message', async (ctx) => {
      const storeName = receivedData.storeName;
 
     // Create an array to store the details of each item
-    const orderDetails = [];
+  const orderDetails = [];
 
-    for (const item of cartItems) {
-      const title = item.title;
-      const price = item.price;
-      const quantity = item.quantity;
-      const description = item.description
+for (const item of cartItems) {
+  const title = item.title;
+  const price = item.price;
+  const quantity = item.quantity;
+  const description = item.description;
+  
+  // Calculate the total price for the current item
+  const totalItemPrice = price * quantity;
 
-      // Add details to the array
-       orderDetails.push(`- المادة: ${title}\n  التفاصيل: ${description}\n  السعر: ${price}\n  العدد: ${quantity}\n`);
-    }
+  // Join the array elements into a single string
+  orderDetails.push(`- المادة: ${title}\n  التفاصيل: ${description}\n  السعر: ${price}\n  العدد: ${quantity}\n  السعر الإجمالي: ${totalItemPrice}\n`);
+}
 
     // Join the array elements into a single string
     const orderMessage = orderDetails.join('\n');
