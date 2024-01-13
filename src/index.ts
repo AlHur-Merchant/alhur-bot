@@ -36,6 +36,7 @@ bot.on('message', async (ctx) => {
     const address = receivedData.address;
     const notice = receivedData.notice;
     const totalPrice = receivedData.totalPrice;
+     const totalItems = receivedData.totalItems// Add total count
      const storeName = receivedData.storeName;
 
     // Create an array to store the details of each item
@@ -60,6 +61,7 @@ bot.on('message', async (ctx) => {
       `تم ارسال الطلب التالي:\n\n` +
       `${orderMessage}\n` +
       `**المجموع: د ${totalPrice.toFixed(2)}**\n` +
+      `**مجموع المواد :** ${totalItems}\n` +
       `**اسم المحل:** ${storeName}\n` +
       `**رقم الهاتف:** ${phoneNumber}\n` +
       `**العنوان:** ${address}\n` +
@@ -71,6 +73,7 @@ bot.on('message', async (ctx) => {
       `**${ctx.from.first_name}**\n\n` +
       `${orderMessage}\n` +
       `**المجموع: د ${totalPrice.toFixed(2)}**\n` +
+      `**مجموع المواد :** ${totalItems}\n` +
       `**اسم المحل:** ${storeName}\n` +
       `**رقم الهاتف:** ${phoneNumber}\n` +
       `**العنوان:** ${address}\n` +
